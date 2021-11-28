@@ -60,7 +60,7 @@ ROOT_URLCONF = 'inventoryproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,6 +85,8 @@ DATABASES = {
     'NAME': env('DATABASE_NAME'),
     'USER': env('DATABASE_USER'),
     'PASSWORD': env('DATABASE_PASS'),
+    'HOST': '127.0.0.1',
+    'PORT': '5432'
 }
 }
 
